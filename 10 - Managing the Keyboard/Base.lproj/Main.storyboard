@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="_0___Managing_the_Keyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1G6-FZ-9tb">
+                                <rect key="frame" x="16" y="360" width="568" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfZ-Tt-TcV">
+                                <rect key="frame" x="239" y="268" width="123" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="b9m-hH-TKL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonChange:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w2b-dc-8nT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-0F-lST">
+                                <rect key="frame" x="16" y="215" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="JNz-ja-omI"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Ab-0F-lST" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="195" id="0ym-Ue-Yvo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1G6-FZ-9tb" secondAttribute="bottom" constant="172" id="8xx-tq-lp0"/>
+                            <constraint firstItem="1G6-FZ-9tb" firstAttribute="leading" secondItem="9Ab-0F-lST" secondAttribute="leading" id="BxC-70-cO4"/>
+                            <constraint firstItem="WfZ-Tt-TcV" firstAttribute="top" secondItem="9Ab-0F-lST" secondAttribute="bottom" constant="23" id="PJT-6H-97G"/>
+                            <constraint firstItem="1G6-FZ-9tb" firstAttribute="trailing" secondItem="9Ab-0F-lST" secondAttribute="trailing" id="mK0-TU-5V1"/>
+                            <constraint firstItem="1G6-FZ-9tb" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="nQc-dR-aGJ"/>
+                            <constraint firstItem="9Ab-0F-lST" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="pKG-Vj-ayk"/>
+                            <constraint firstItem="WfZ-Tt-TcV" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="qX9-oW-E8f"/>
+                            <constraint firstItem="1G6-FZ-9tb" firstAttribute="top" secondItem="WfZ-Tt-TcV" secondAttribute="bottom" constant="28" id="udE-Dr-tsL"/>
+                            <constraint firstItem="9Ab-0F-lST" firstAttribute="centerX" secondItem="WfZ-Tt-TcV" secondAttribute="centerX" id="zTQ-Rt-2hd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputText" destination="9Ab-0F-lST" id="msl-o5-V5h"/>
+                        <outlet property="labelResult" destination="1G6-FZ-9tb" id="sKB-7p-NZ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
